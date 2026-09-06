@@ -56,7 +56,7 @@ services:
     runtime: image
     image:
       url: 'docker.io/library/mysql:8.0.44'
-    dockerCommand: mysqld --performance-schema=OFF
+    dockerCommand: docker-entrypoint.sh mysqld --performance-schema=OFF
     disk:
       name: mysql
       mountPath: /var/lib/mysql
